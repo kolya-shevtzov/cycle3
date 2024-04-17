@@ -3,8 +3,7 @@ public class Main {
         int salary = 15000;
         int total=0;
         int i=0;
-
-        while (total<1_000_000)
+        while (total<2_459_000)
         {
         i=i+1;
         total=total+salary;
@@ -30,26 +29,22 @@ public class Main {
             y=y+(people*(born -dead));
             System.out.println("год "+t+" численность населения состовляет "+y);
         }
-        int total1=0;
-        int salary1=15000;
-        int b=15000%7;
+         double total1=0;
+        double salary1=15000;
+        double c=0.07;
         int d=0;
 
         for (;total1<12_000_000;d++)
         {
-            salary1=salary1+b;
-            total1=total1+salary1;
+            total1=total1+salary1*c;
             System.out.println(d+" "+total1);
         }
-        int total2=0;
-        int salary2=15000;
-        int b2=15000%7;
+        double total2=0;
+        double salary2=15000;
         int d2=0;
-
         for(;total2<12_000_000;d2++)
         {
-            salary2=salary2+b2;
-            total2=total2+salary2;
+            total2=total2+salary2*c;
             if(d2%6==0)
                 System.out.println(d2+" "+total2);
         }
@@ -74,15 +69,13 @@ public class Main {
         for(;friday<=31;friday+=7)
         {
             System.out.println("Сегодня пятница,"+friday+"-е число. Необходимо подготовить отчет");}
-
         int currentYear = 2023;
         for(int m=0;m<currentYear+100; m=m+79)
+    {
+        if (m>currentYear-200)
         {
-            if (m>currentYear-200)
-            {
-    System.out.println(m);
-            }
+            System.out.println(m);
         }
-
+    }
     }
 }
