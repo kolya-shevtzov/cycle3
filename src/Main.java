@@ -29,21 +29,22 @@ public class Main {
             y=y+(people*(born -dead));
             System.out.println("год "+t+" численность населения состовляет "+y);
         }
-         double total1=0;
-        double salary1=15000;
-        int d=0;
+        double total1 = 0;
+        double salary1 = 15000;
+        int d = 0;
 
-        for (;total1<12_000_000;d++)
-        {
+        for (; total1 < 12_000_000; d++) {
+            total1 = total1 * 1.07;
             salary1 = salary1 * 1.07;
             total1 = total1 + salary1;
-            System.out.println(d+" "+total1);
+            System.out.println(d + " " + total1);
         }
         double total2=0;
         double salary2=15000;
         int d2=0;
         for(;total2<12_000_000;d2++)
         {
+            total2 = total2 * 1.07;
             salary2 = salary2 * 1.07;
             total2 = total2 + salary2;
             if(d2%6==0)
@@ -58,9 +59,9 @@ public class Main {
         for (;mounth<YearMounth;mounth++)
         {
             for (; total3 < 12_000_000; mounth++) {
+                total3 = total3 * 1.07;
                 salary3 = salary3 * 1.07;
                 total3 = total3 + salary3;
-
                 if (mounth % 6 == 0) {
                     System.out.println(mounth + " " + total3);}
             }
@@ -71,7 +72,8 @@ public class Main {
         {
             System.out.println("Сегодня пятница,"+friday+"-е число. Необходимо подготовить отчет");}
         int currentYear = 2024;
-        int year1 = currentYear - 200;
+        int previousCycleYear = currentYear - (currentYear % 79);
+        int year1 = previousCycleYear - 79;
         int year2 = currentYear + 100;
 
         for (int comet = year1; comet < year2; comet++) {
@@ -79,5 +81,8 @@ public class Main {
                 System.out.println(comet);
             }
         }
+
+
+
     }
 }
